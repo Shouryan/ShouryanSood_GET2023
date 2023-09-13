@@ -1,0 +1,65 @@
+update customers
+set Customername="Alpha"
+where CustomerID="76";
+
+select * from customers;
+
+update customers
+set PostalCode="13301"
+where country="UK" and
+city not in ("Berlin") and
+CustomerID between 1 and 10;
+
+select * from customers order by City;
+
+select City,count(CustomerName)
+from customers
+group by City;
+
+
+select * from products
+where ProductName like "C%" 
+and Price>18 and Price<25;
+
+select * from products
+group by CategoryID 
+order by CategoryID desc;
+
+select sum(price)
+from products
+group by productID;
+
+select ProductID,avg(price)
+from products
+group by SupplierID;
+
+select Productname,MIN(Price)
+from products; 
+
+select unit,MAX(Price)
+from products; 
+
+
+Select customers.City, customers.Country, orders.ShipperID
+from orders
+inner join customers on orders.CustomerID=customers.CustomerID;
+
+Select categories.CategoryName,categories.Description
+from categories
+inner join products on products.CategoryID=categories.CategoryID
+where price>15 and price <25;
+
+Select customers.CustomerName, customers.PostalCode, customers.City, orders.OrderDate,order_details.Quantity
+from orders
+inner join Customers on Customers.customerid= orders.customerid
+inner join order_details on orders.orderid= order_details.orderid;
+
+Select products.ProductName, products.unit, products.price, orders.OrderDate
+from order_details
+inner join products on products.ProductID= order_details.ProductID
+inner join orders on orders.OrderID = order_details.OrderID;
+
+alter table customers
+modify postalcode varchar(255) not null;
+
+desc customers;

@@ -1,0 +1,9 @@
+div p{
+    font-size: 2 rem;
+    width:100px;
+    height:100px;
+}
+.d1{
+    grid-column-start: 1;
+    grid-column-end:3 ;
+}

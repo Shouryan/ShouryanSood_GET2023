@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>h2{text-align: center;}
+    </style>
+    <title>Form</title>
+</head>
+<h2>Register</h2>
+<body>
+    <form class="formf" method="get" action="./new.html">
+     <div>
+         <label for="name">Full Name*</label>
+         <input type="text" name="name" placeholder="First Name" required> 
+         <input type="text" name="name" placeholder="Last Name" required> 
+     </div>
+     <div>
+        <label for="Address">Address</label>
+    </div>
+        <div><textarea name="Address" id="" cols="50" rows="5"></textarea></div>
+     <div>
+        <label for="email">Email Address*</label>
+        <input type="email" name="email" placeholder="email " required>
+     </div>   
+     <div>
+        <label for="phone">Phone* </label>
+        <input type="number" name="phone" >
+     </div>   
+     <div>
+         <p>Gender</p>
+        <label for="radiooption">Male</label>
+        <input type="radio" name="radiooption" >
+        <label for="radiooption">Femle</label>
+        <input type="radio" name="radiooption"  >
+     </div>
+    <div>
+        <p>Hobbies</p>
+        <input type="checkbox" name="check">
+        <label for="check">Cricket</label><br>
+        <input type="checkbox" name="check">
+        <label for="check">Movies</label><br>
+        <input type="checkbox" name="check">
+        <label for="check">Hockey</label>
+    </div>
+        <div>
+         <label for="lang">Language</label>
+         <select name="language" id="lang" multiple>
+             <option value="Arabic">Arabic</option>
+             <option value="Hindi">Hindi</option>
+             <option value="English">English</option>
+             <option value="French">French</option>
+             <option value="Tamil">Tamil</option>
+         </select>
+        </div>
+        <div>
+            <label for="Skills">Skills</label>
+         <select name="language" id="lang" >
+             <option value="HTML">HTML</option>
+             <option value="CSS">CSS</option>
+             <option value="AutoCAD">AUTOCAD</option>
+             <option value="French">French</option>
+             <option value="Tamil">Tamil</option>
+         </select>
+        </div>
+        <div>
+            <label for="Vountry">Country</label>
+         <select name="Country" id="lang" >
+             <option value="India">India</option>
+             <option value="Other">Other</option>
+         </select>
+        </div>
+    
+    </form>
+    
+</body>
+</html>

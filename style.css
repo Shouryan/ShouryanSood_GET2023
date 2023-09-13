@@ -1,0 +1,21 @@
+
+
+div p::first-line{
+    font-size: 20px;
+}
+div p::first-letter{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: blue;
+}
+.even::first-letter{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+}
+div p::before{
+    content: "Welcome";
+}
+div ~p::after{
+    content: "bye";
+}
